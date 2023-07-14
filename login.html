@@ -8,8 +8,8 @@
     <title>Document</title>
     <!-- 헤더링크 -->
     <link rel="stylesheet" href="CSS/header.css">
-    <!-- 메인링크 -->
-    <link rel="stylesheet" href="CSS/main.css">
+    <!-- 로그인 링크 -->
+    <link rel="stylesheet" href="CSS/login.css">
     <!-- 푸터링크 -->
     <link rel="stylesheet" href="CSS/footer.css">
     <style>
@@ -30,9 +30,9 @@
             background-repeat: no-repeat;
             background-position: center;
             position: absolute;
+            margin-left: -109px;
             top: 8px;
             left: 50%;
-            margin-left: -109px;
             z-index: 2;
         }
 
@@ -131,8 +131,8 @@
     </header>
 
         <!-- 로그인 -->
-        <div class="contents">
-            <div class="login-contents">
+        <div class="login-contents">
+            <div class="login-box">
               <ul class="login-ul">
                 <li class="active">
                   <button type="button" class="tab-member">
@@ -141,35 +141,18 @@
                   <div class="login-member">
                     <div class="login-box">
                       <p class="tip">
-                        L.POINT, 롯데시네마 ID로 별도의 회원가입 없이 이용 가능
-                        합니다.
+                        L.POINT, 롯데시네마 ID로 별도의 회원가입 없이 이용 가능합니다.
                       </p>
                       <form action="#" method="post">
                         <div class="login-area">
-                          <input
-                            type="text"
-                            id="userid"
-                            maxlength="30"
-                            placeholder="아이디를 입력해 주세요."
-                            required
-                          />
-                          <input
-                            type="password"
-                            id="userpw"
-                            maxlength="20"
-                            placeholder="비밀번호를 입력해 주세요."
-                            required
-                          />
+                          <input type="text" id="userid" maxlength="30" placeholder="아이디를 입력해 주세요."required/>
+                          <input type="password" id="userpw" maxlength="20" placeholder="비밀번호를 입력해 주세요." required/>
                           <button type="button" class="login-btn">로그인</button>
                         </div>
                       </form>
                       <div class="login-bot">
                         <div class="login-check">
-                          <input
-                            type="checkbox"
-                            name="logincheck"
-                            id="checksavedid"
-                          />
+                          <input type="checkbox" name="logincheck" id="checksavedid"/>
                           <label for="checksavedid">아이디 저장</label>
                         </div>
                         <div class="login-menu">
@@ -184,14 +167,9 @@
                     </div>
                   </div>
                 </li>
-                <li>
+                <li class="nonactive">
                   <button type="button" class="tab-nonmember">
                     <span>비회원</span>
-                  </button>
-                </li>
-                <li>
-                  <button type="button" class="tab-social">
-                    <span>소셜 로그인</span>
                   </button>
                 </li>
                 <li class="wrap-underline">
