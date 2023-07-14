@@ -1,32 +1,71 @@
 /* 전체 */
 ul{}
-li{}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
 button{
     cursor: pointer;
 }
 
 /* 로그인 전체 */
-.login-contents {}
-.login-contents>.login-box{}
-.contents>.login-contents>.login-ul{}
+.login-contents{
+    height: 300px;
+    flex-wrap: wrap;
+    width: 100%;
+    display: block;
+    margin: 10px 0px 10px 0px;
+}
+.login-contents>.login-box{
+    padding: 60px 0px 60px 0px;
+}
+.login-contents>.login-box>.login-ul{
+
+}
 
 /* 회원 로그인 */
-.contents>.login-contents>.login-ul>.active{}
-.contents>.login-contents>.login-ul>.active>.tab-member{}
-.contents>.login-contents>.login-ul>.active>.tab-member span{}
-.contents>.login-contents>.login-ul>.active>.login-member{}
-.contents>.login-contents>.login-ul>.active>.login-member>.login-box{}
-.contents>.login-contents>.login-ul>.active>.login-member>.login-box>form{}
+.login-contents>.login-box>.login-ul>.active{
+    background-color: gray;
+}
+.login-contents>.login-box>.login-ul>.active>.tab-member-btn{
+    background-color: white;
+    border: none;
+}
+.login-contents>.login-box>.login-ul>.active>.tab-member-btn span{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>form{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>form>.login-area{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>form>.login-area>input{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>form>.login-area>.login-btn{
+    background-color: red;
+    border: none;
+}
+#userid{}
+#userpw{}
 /* 로그인 하단부 */
-.contents>.login-contents>.login-ul>.active>.login-member>.login-box>.login-bot{}
-.contents>.login-contents>.login-ul>.active>.login-member>.login-box>.login-bot>.login-check{}
-.contents>.login-contents>.login-ul>.active>.login-member>.login-box>.login-bot>.login-menu{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>.login-bot{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>.login-bot>.login-check{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>.login-bot>.login-menu{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>.login-bot>.login-menu>a:after{
+    content: "  |";
+}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>.login-bot>.login-menu>a:nth-child(3)::after{
+    content: "";
+}
 /* 로그인 광고 - JS -> 로그인 박스 오른쪽에 위치*/
-.contents>.login-contents>.login-ul>.active>.login-member>.login-box>.login-bot>.ad-box{}
+.login-contents>.login-box>.login-ul>.active>.login-member>.login-box>.login-bot>.ad-box{}
 
 /* 비회원 로그인 */
-.contents>.login-contents>.login-ul>.nonactive
-.contents>.login-contents>.login-ul>.nonactive>.tab-nonmember{}
+.login-contents>.login-box>.login-ul>.nonactive{
+
+}
+.login-contents>.login-box>.login-ul>.nonactive>.tab-nonmember-btn{
+    background-color: white;
+    border: none;
+}
 
 
 /* 회원 비회원 언더라인 */
