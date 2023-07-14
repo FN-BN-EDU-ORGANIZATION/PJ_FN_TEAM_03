@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section1 {
+            width: 100%;
+            height: 100px;
+            border: 1px solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .Container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .Nmcd {
+            display: flex;
+            width: 200px;
+            border: 1px solid;
+        }
+
+        .Gap {
+            width: 50px;
+        }
+
+        .CRUD {
+            display: flex;
+        }
+
+        .NmCd>div,
+        .CRUD>div {
+            border: 1px solid;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section1">
+        <div class="Container">
+            <div class="NmCd">
+                <div class="MovieNm">영화명</div>
+                <div class="MovieCd">무비코드</div>
+            </div>
+            <div class="Gap"></div>
+            <div class="CRUD">
+                <div class="Select">조회</div>
+                <div class="ESC">초기화</div>
+                <div class="MovieCreate">영화등록</div>
+                <div class="MovieUpdate">영화수정</div>
+                <div class="MovieDelete">영화삭제</div>
+            </div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="Select">
+            <div id="Select">영화조회</div>
+        </div>
+        <table class="QnA_list">
+            <tbody>
+                <tr class="QnA_menu">
+                    <th id="th1">영화코드</th>
+                    <th id="th2">영화명</th>
+                    <th id="th3">개봉일</th>
+                    <th id="th4">감독명</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">범죄도시</a></td>
+                    <td>2023-04-23</td>
+                    <td>봉준호</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="">범죄도시</a></td>
+                    <td>2023-04-23</td>
+                    <td>봉준호</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="">범죄도시</a></td>
+                    <td>2023-04-22</td>
+                    <td>봉준호</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="">범죄도시</a></td>
+                    <td>2023-04-10</td>
+                    <td>봉준호</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="">범죄도시</a></td>
+                    <td>2023-02-27</td>
+                    <td>봉준호</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><a href="">범죄도시</a></td>
+                    <td>2023-02-11</td>
+                    <td>봉준호</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><a href="">범죄도시</a></td>
+                    <td>2023-01-15</td>
+                    <td>봉준호</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><a href="">범죄도시</a></td>
+                    <td>2023-01-01</td>
+                    <td>봉준호</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><a href="">범죄도시</a></td>
+                    <td>2022-12-18</td>
+                    <td>봉준호</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><a href="">범죄도시</a> </td>
+                    <td>2022-12-02</td>
+                    <td>봉준호</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn_write"><input type="button" value="글쓰기"></div>
+    </section>
+
+</body>
+
+</html>

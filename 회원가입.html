@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- 헤더링크 -->
-    <link rel="stylesheet" href="CSS/header.css">
-    <!-- 메인링크 -->
-    <link rel="stylesheet" href="CSS/main.css">
-    <!-- 푸터링크 -->
+     <!-- 헤더링크 -->
+     <link rel="stylesheet" href="CSS/header.css">
+      <!-- 푸터링크 -->
     <link rel="stylesheet" href="CSS/footer.css">
     <style>
         header>.header {
@@ -42,9 +38,16 @@
             width: 100%;
             height: 100%;
         }
+        .first{
+           margin-top: 50px;
+           margin-bottom: 10px;
+        }
+        .con{
+            display:inline-block;
+            width: 100px;
+        }
     </style>
 </head>
-
 <body>
     <header>
         <div id="header_section" class="header">
@@ -64,7 +67,7 @@
                     <li><a href="">로그인</a></li>
                 </ul>
                 <ul class="menu3">
-                    <li><a href="회원가입.html">회원가입</a></li>
+                    <li><a href="">회원가입</a></li>
                     <li><a href="">바로예매</a></li>
                     <li><a href=""><img src="image/햄버거버튼.png"></a></li>
                 </ul>
@@ -130,32 +133,63 @@
                 </div>
             </div>
     </header>
-    <main>
-        <div class="subsection">
-            <div class="sub1">
-                <div class="sub2">
-                    <div class="front">
-                        <a href=""><img src="https://caching2.lottecinema.co.kr/lotte_image/2023/BIG/BIG_1920774.jpg" alt=""></a>
-                    </div>
-                    <div class="back">
-                        <a href=""><img src="image/메인화면2.jpg" alt=""></a>
-                    </div>
-                </div>
+    <div style="width: 900px; margin-left: 300px; margin-top:-40px;">
+        <h2>회원가입</h2>
+        <br>
+        <h1>회원가입을 위해 <br>휴대폰 본인 인증해주세요.</h1>
+
+        <div class="first"><strong>인증정보입력</strong></div><hr>
+        <div>
+            <label for="name"><span class="con">이름 : </span></label><input type="text" placeholder="한글 또는 영문"><hr>
+        </div>    
+        <div>
+        <label for="birth"><span class="con">생년월일 : </span></label><input type="text" placeholder="생년월일 입력"><hr>
+        </div>
+        <div>
+            <label for=""><span class="con">성별 : </span></label><input type="radio" name="gender" value="man"> 남 <input type="radio"
+                    name="gender" value="woman"> 여<hr>
+        </div>
+        <div>
+            <label for="phone"></span>휴대폰번호 : </label>
+            <div>
+                <select name="통신사">
+                    <option value="SKT">SKT</option>
+                    <option value="KT" selected>KT</option>
+                    <option value="LG" >LG</option>
+                </select>
+                <select name="ph--ln">
+                    <option value="010" selected>010</option>
+                    <option value="011">011</option>
+                    <option value="018">018</option>
+                </select>
+                <span> - </span>
+                <input type="tel" pattern="[0-9]{3,4}"  required />
+                <span> - </span>
+                <input type="tel" pattern="[0-9]{4}" required />
+
+                <input type="button" value="인증">
+
             </div>
-    </main>
-    <div class="contents">
-        <div class="contentslist">
-            <div class="mainmovie">
-                <li><a href=""><img src="image/분노의질주.jpg" alt="">분노의질주:라이드 오어 다이</a></li>
-                <li><a href=""><img src="image/가디언즈.jpg" alt="">가디언즈 오브 갤럭시:Volume 3</a></li>
-                <li><a href=""><img src="image/범죄도시.jpg" alt="">범죄도시3</a></li>
-                <li><a href=""><img src="image/슈퍼마리오.jpg" alt="">슈퍼마리오브라더스</a></li>
-                <li><a href=""><img src="image/빅트립2.jpg" alt="">빅트립2</a></li>
-            </div>
-         </div>
+            <hr>
+        </div>
+        <div>
+            <label for="addr"><span class="con">주소 : </span></label><input type="text" placeholder="주소 입력">
+        </div>
+        <hr>
+        <div>
+            <label for="id"><span class="con">ID : </span></label><input type="text">
+        </div>
+        <br>
+        <div>
+            <label for="pw"><span class="con">PASSWORD : </span></label><input type="password" placeholder="********">
+        </div>
+        <div style= "display: flex; justify-content: center; margin-top: 40px;">
+        <input type="button" style="background-color: red;" value="취소">
+        <input type="button" value="회원가입" style="margin-left: 5px;">
+        </div>
     </div>
     <footer>
-        <div class="footer">
+        <div class="footer" style="margin-top:30px;">
             <div class="inner">
                 <span class="footerlogo">
                     <img src="image/푸터로고.gif" alt="">
@@ -184,9 +218,5 @@
             </div>
         </div>
     </footer>
-
-
-
 </body>
-
 </html>
