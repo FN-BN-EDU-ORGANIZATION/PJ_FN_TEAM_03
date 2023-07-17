@@ -21,6 +21,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/><script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumBarunGothicYetHangul.css" rel="stylesheet">
     <style>
     
         .swiper-slide{
@@ -34,7 +35,7 @@
     <header>
         <div id="header_section" class="header">
             <h1 class="logo">
-                <a href="home.html"></a>
+                <a href="index.html"></a>
             </h1>
             <div class="gnb">
                 <ul class="menu1">
@@ -158,6 +159,15 @@
             <a href="#none" class="quick_top" id="to_top">TOP</a>
         </div>
     </div>
+          <!-- 왼쪽 사이드 배너 -->
+          <div class="left_section">
+            <div class="left_banner">
+              <!-- 광고 배너 이미지 -->
+              <a href=""><img src="./image/RUBYGILLMAN_145145.png" alt=""></a>
+            </div>
+            <!-- 광고 닫는 버튼 -->
+            <button class="banner_close"></button>
+          </div>
     <footer>
         <div class="footer">
             <div class="inner">
@@ -215,6 +225,25 @@
     }
       $(".quick_section").stop();
       $(".quick_section").animate( { "top" : scrollTop });
+    });
+    // 좌측 광고
+    $(window).scroll(function(){
+    var scrollTop = $(document).scrollTop();
+    if (scrollTop < 300) {
+      scrollTop = 300;
+    }
+      $(".left_section").stop();
+      $(".left_section").animate( { "top" : scrollTop });
+    });
+     // x표시 광고 끄기
+    // 버튼과 광고 요소 선택
+    const bannerCloseButton = document.querySelector('.banner_close');
+    const leftBanner = document.querySelector('.left_banner');
+
+    // 버튼 클릭 시 광고 숨기기
+    bannerCloseButton.addEventListener('click', function () {
+      leftBanner.style.display = 'none';
+      bannerCloseButton.style.display = 'none';
     });
     </script>
 

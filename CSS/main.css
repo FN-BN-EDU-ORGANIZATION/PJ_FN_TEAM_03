@@ -140,4 +140,33 @@ main>.subsection>.sub1>.sub2>.front>a{
     color: white;
     background-color: #3a3a3a;
 }
+/* 왼쪽 사이드 배너1 */
+.left_section {
+    position: absolute;
+    top: 300px;
+    left: 45%;
+    margin-left: -660px;
+    z-index: 100;
+}
+.left_section>.left_banner {}
+.left_section>.left_banner a{
+    display: block;
+    overflow: hidden;
+    width: 145px;
+    height: 145px;
+}
+.left_section>.left_banner a img {
+    border: none;
+}
+/* 누르면 광고 닫히게 */
+.left_section>.banner_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    border: 0;
+    /* x표시 이미지 */
+    background: transparent url(../image/close_13_gry.png) no-repeat 0 0;
+}
    
