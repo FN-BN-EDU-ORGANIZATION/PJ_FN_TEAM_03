@@ -10,41 +10,11 @@
     <link rel="stylesheet" href="CSS/default.css">
     <!-- 헤더링크 -->
     <link rel="stylesheet" href="CSS/header.css">
-    <!-- 메인링크 -->
-    <link rel="stylesheet" href="CSS/main.css">
     <!-- 로그인 링크 -->
     <link rel="stylesheet" href="CSS/login.css">
     <!-- 푸터링크 -->
     <link rel="stylesheet" href="CSS/footer.css">
     <style>
-        header>.header {
-            /* border: 1px solid; */
-            position: relative;
-            width: 100%;
-            height: 194px;
-            z-index: 2;
-            /* background-image: url(/image/logo.png); */
-        }
-
-        header>.header>.logo {
-            width: 219px;
-            height: 37px;
-            background-image: url(image/logo2.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: absolute;
-            margin-left: -109px;
-            top: 8px;
-            left: 50%;
-            z-index: 2;
-        }
-
-        header>.header>.logo>a {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
     </style>
 </head>
 
@@ -136,60 +106,86 @@
 
         <!-- 로그인 -->
         <div class="login-contents">
-            <div class="login-box">
-              <ul class="login-ul">
-                <li class="active">
-                  <button type="button" class="tab-member-btn">
-                    <span>회원</span>
-                  </button>
+          <div class="login-main">
+            <ul class="login-ul">
+              <li class="active">
+                <button type="button" class="tab-member-btn">
+                  <span>회원</span>
+                </button>
+                <button type="button" class="tab-nonmember-btn">
+                  <span>비회원</span>
+                </button>
+                <div class="tab_con">
                   <div class="login-member">
-                    <div class="login-box">
-                      <p class="tip">
-                        L.POINT, 롯데시네마 ID로 별도의 회원가입 없이 이용 가능합니다.
-                      </p>
-                      <form action="#" method="post">
-                        <div class="login-area">
-                          <input type="text" id="userid" maxlength="30" placeholder="아이디를 입력해 주세요."required/>
-                          <input type="password" id="userpw" maxlength="20" placeholder="비밀번호를 입력해 주세요." required/>
-                          <button type="button" class="login-btn">로그인</button>
+                    <div class="contents_inner">
+                      <div class="login-box">
+                        <p class="tip">
+                          기능이 제한된 비회원으로도 로그인이 가능합니다.
+                        </p>
+                        <form action="#" method="post">
+                          <div class="login-area">
+                            <input type="text" id="userid" maxlength="30" placeholder="아이디를 입력해 주세요."required/>
+                            <br/>
+                            <input type="password" id="userpw" maxlength="20" placeholder="비밀번호를 입력해 주세요." required/>
+                            <button type="button" class="login-btn">로그인</button>
+                          </div>
+                        </form>
+                        <div class="login-bot">
+                          <div class="login-check">
+                            <input type="checkbox" name="logincheck" id="checksavedid"/>
+                            <label for="checksavedid">아이디 저장</label>
+                          </div>
+                          <div class="login-menu">
+                            <a href="#">회원가입</a>
+                            <a href="#">아이디 찾기</a>
+                            <a href="#">비밀번호 찾기</a>
+                          </div>
                         </div>
-                      </form>
-                      <div class="login-bot">
-                        <div class="login-check">
-                          <input type="checkbox" name="logincheck" id="checksavedid"/>
-                          <label for="checksavedid">아이디 저장</label>
-                        </div>
-                        <div class="login-menu">
-                          <a href="#">회원가입</a>
-                          <a href="#">아이디 찾기</a>
-                          <a href="#">비밀번호 찾기</a>
-                        </div>
-                        <div class="ad-box">
-                          <a href="#"></a>
-                        </div>
+                      </div>
+                      <div class="ad-box">
+                        <!-- 광고 이미지 -->
+                        <a href="#none"><img src="./image/q858v6_s5qv-ya5to3_logo.png" alt=""></a>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li class="nonactive">
-                  <button type="button" class="tab-nonmember-btn">
-                    <span>비회원</span>
-                  </button>
-                  <div></div>
-                </li>
-                <li class="wrap-underline">
-                  <span class="nav-underlune"></span>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+              <!-- <li class="nonactive">
+                <button type="button" class="tab-nonmember-btn">
+                  <span>비회원</span>
+                </button>
+              </li>
+              <li class="wrap-underline">
+                <span class="nav-underline"></span>
+              </li> -->
+            </ul>
           </div>
-          <!-- 하단 광고 배너 -->
-    <div class="side-banner2">
-        <div class="bot-banner">
-          <a href="#"></a>
         </div>
-        <div class="bot-banner2">
-          <a href="#"></a>
+          <!-- 하단 광고 배너 -->
+      <div class="banner_section">
+        <div class="bot_banner">
+          <!-- 광고 배너 이미지 -->
+          <a href="#none"><img src="./image/RUBYGILLMAN_980180.jpg" alt=""></a>
+        </div>
+      </div>
+      <!-- 왼쪽 사이드 배너 -->
+      <div class="left_section">
+        <div class="left_banner">
+          <!-- 광고 배너 이미지 -->
+          <a href=""><img src="./image/RUBYGILLMAN_145145.png" alt=""></a>
+        </div>
+        <!-- 광고 닫는 버튼 -->
+        <button class="banner_close"></button>
+      </div>
+      <!-- 오른쪽 사이드 배너 -->
+      <div class="quick_section">
+        <div class="quick_menu">
+          <!-- 퀵메뉴 이미지 -->
+          <a href="#none"><img src="./image/961c9cbf311b4f1299827c21a61fab76.png" alt=""></a>
+          <a href="#none"><img src="./image/c1dbce4f91e948498c7c78239b7157ac.png" alt=""></a>
+          <a href="#none"><img src="./image/c793af89f3b648aa99cc679186ccfa02.png" alt=""></a>
+          <!-- 최상단 올라가기 버튼 -->
+          <a href="" class="quick_top">TOP</a>
         </div>
       </div>
       <!-- 로그인 끝 -->
