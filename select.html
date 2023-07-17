@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 기본 -->
+    <link rel="stylesheet" href="CSS/default.css">
+    <!-- 헤더링크 -->
+     <link rel="stylesheet" href="CSS/header.css">
+    <!-- 푸터링크 -->
+    <link rel="stylesheet" href="CSS/footer.css">
     <style>
         .section1 {
             width: 100%;
@@ -18,15 +24,16 @@
         .Container {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-evenly;
         }
 
-        .Nmcd {
-            display: flex;
-            width: 200px;
-            border: 1px solid;
+        .NmCd {  
+            width: 400px;
+            /* border: 1px solid; */
         }
-
+        .MovieNm{
+            margin-bottom:10px;
+        }
         .Gap {
             width: 50px;
         }
@@ -34,109 +41,241 @@
         .CRUD {
             display: flex;
         }
-
         .NmCd>div,
         .CRUD>div {
-            border: 1px solid;
+            /* border: 1px solid; */
             flex-wrap: wrap;
             justify-content: center;
+            margin-left:20px;
+        }
+        .Movie_list{
+            border-collapse:separate;
+            border-spacing:0 10px;
+        }
+        .Movie_list td{
+            padding :0 30px;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <div id="header_section" class="header">
+            <h1 class="logo">
+                <a href="home.html"></a>
+            </h1>
+            <div class="gnb">
+                <ul class="menu1">
+                    <li><a href=""><img src="image/페이스북.png" alt="페이스북로고"></a></li>
+                    <li><a href="" style="width:35px"><img src="image/유튜브-removebg-preview.png" alt="유튜브로고"></a></li>
+                    <li><a href=""><img src="image/인스타그램.png" alt="인스타그램로고"></a></li>
+                </ul>
+                <ul class="menu2">
+                    <li><a href="">멤버십</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">단체관람/대관문의</a></li>
+                    <li><a href="">로그인</a></li>
+                </ul>
+                <ul class="menu3">
+                    <li><a href="회원가입.html">회원가입</a></li>
+                    <li><a href="">바로예매</a></li>
+                    <li><a href=""><img src="image/햄버거버튼.png"></a></li>
+                </ul>
+                <div class="nav">
+                    <ul class="submenu">
+                        <li>
+                            <a href="">예매</a>
+                            <ul class="submenu1">
+                                <li><a href="">예매하기</a></li>
+                                <li><a href="">상영시간표</a></li>
+                                <li><a href="">할인안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">영화</a>
+                            <ul class="submenu2">
+                                <li><a href="">홈</a></li>
+                                <li><a href="">현재상영작</a></li>
+                                <li><a href="">상영예정작</a></li>
+                                <li><a href="">아르떼</a></li>
+                                <li><a href="">국립극장</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">영화관</a>
+                            <ul class=submenu3>
+                                <li><a href="">스페셜관</a></li>
+                                <li><a href="">서울</a></li>
+                                <li><a href="">경기/인천</a></li>
+                                <li><a href="">충청/대전</a></li>
+                                <li><a href="">전라/광주</a></li>
+                                <li><a href="">경상/대구</a></li>
+                                <li><a href="">경상/부산/울산</a></li>
+                                <li><a href="">강원</a></li>
+                                <li><a href="">제주</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">이벤트</a>
+                            <ul class="submenu4">
+                                <li><a href="">홈</a></li>
+                                <li><a href="">영화</a></li>
+                                <li><a href="">시사회/무대인사</a></li>
+                                <li><a href="">HOT</a></li>
+                                <li><a href="">제휴할인</a></li>
+                                <li><a href="">우리동네영화관</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">스토어</a>
+                            <ul class="submenu5">
+                                <li><a href="">베스트</a></li>
+                                <li><a href="">관람권</a></li>
+                                <li><a href="">스낵음료</a></li>
+                                <li><a href="">포토카드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""></a>
+                            <ul></ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </header>
     <section class="section1">
         <div class="Container">
             <div class="NmCd">
-                <div class="MovieNm">영화명</div>
-                <div class="MovieCd">무비코드</div>
+                <div class="MovieNm">영화명 : <input type="text"></div>
+                <div class="MovieCd">장르 : <input type="text"></div>
             </div>
             <div class="Gap"></div>
             <div class="CRUD">
-                <div class="Select">조회</div>
-                <div class="ESC">초기화</div>
-                <div class="MovieCreate">영화등록</div>
-                <div class="MovieUpdate">영화수정</div>
-                <div class="MovieDelete">영화삭제</div>
+                <div class="Select"><input type="button" value="조회"></div>
+                <div class="ESC"><input type="button" value="초기화"></div>
+                <div class="MovieCreate"><input type="button" value="영화등록"></div>
+                <div class="MovieUpdate"><input type="button" value="영화수정"></div>
+                <div class="MovieDelete"><input type="button" value="영화삭제"></div>
             </div>
         </div>
     </section>
     <section class="section2">
         <div class="Select">
-            <div id="Select">영화조회</div>
+            <div id="Select" style="margin-top:30px;">영화조회목록</div>
         </div>
-        <table class="QnA_list">
+        <table class="Movie_list">
             <tbody>
-                <tr class="QnA_menu">
-                    <th id="th1">영화코드</th>
+                <tr class="Movie_menu">
+                    <th></th>
+                    <th id="th1">장르</th>
                     <th id="th2">영화명</th>
                     <th id="th3">개봉일</th>
                     <th id="th4">감독명</th>
                 </tr>
                 <tr>
-                    <td>1</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a></td>
                     <td>2023-04-23</td>
                     <td>봉준호</td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a></td>
                     <td>2023-04-23</td>
                     <td>봉준호</td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a></td>
                     <td>2023-04-22</td>
                     <td>봉준호</td>
                 </tr>
                 <tr>
-                    <td>4</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a></td>
                     <td>2023-04-10</td>
                     <td>봉준호</td>
                 </tr>
                 <tr>
-                    <td>5</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a></td>
                     <td>2023-02-27</td>
                     <td>봉준호</td>
                 </tr>
                 <tr>
-                    <td>6</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a></td>
                     <td>2023-02-11</td>
                     <td>봉준호</td>
                 </tr>
                 <tr>
-                    <td>7</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a></td>
                     <td>2023-01-15</td>
                     <td>봉준호</td>
                 </tr>
                 <tr>
-                    <td>8</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a></td>
                     <td>2023-01-01</td>
                     <td>봉준호</td>
                 </tr>
                 <tr>
-                    <td>9</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a></td>
                     <td>2022-12-18</td>
                     <td>봉준호</td>
                 </tr>
                 <tr>
-                    <td>10</td>
+                    <td><input type="checkbox"></td>
+                    <td>액션,코미디</td>
                     <td><a href="">범죄도시</a> </td>
                     <td>2022-12-02</td>
                     <td>봉준호</td>
                 </tr>
             </tbody>
         </table>
-        <div class="btn_write"><input type="button" value="글쓰기"></div>
+        <div class="btn_write" style="margin-bottom:30px;"><input type="button" value="관심목록등록"></div>
     </section>
+    <footer>
+        <div class="footer">
+            <div class="inner">
+                <span class="footerlogo">
+                    <img src="image/logo3.png" alt="">
+                </span>
+                <ul class="footermenu">
+                    <li><a href="#" >이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">영상정보처리기기 운영 및 관리방침</a></li>
+                    <li><a href="#">L.POINT회원안내</a></li>
+                    <li><a href="#">배정기준</a></li>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">광고/임대문의</a></li>
+                    <li><a href="#">기업정보</a></li>
+                    <li><a href="#">사회적책임</a></li>
+                </ul>
+                <div class="address">
+                    <span class="bar">서울특별시 송파구 올림픽로 300 롯데월드타워 27층</span>
+                    <span class="bar">고객센터 1544-8855 (유료)</span><br>
+                    <span class="bar">대표이사 3조</span>
+                    <span class="bar">사업자등록번호 111-11-11111</span>
+                    <span class="bar">통신판매없신고번호 제1111호</span>
+                    <span class="bar">개인정보보호책임자 4조</span>
+                </div>
+                <p class="copyright" style="font-size: 12px;">COPYRIGHT LOTTE CINEMA ALL RIGHT RESERVED.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
