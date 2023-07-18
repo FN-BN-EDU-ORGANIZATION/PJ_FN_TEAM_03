@@ -49,3 +49,6 @@ div {
 label {
     cursor: default;
 }
+*{
+    font-family: 'NanumBarunGothicYetHangul';
+}

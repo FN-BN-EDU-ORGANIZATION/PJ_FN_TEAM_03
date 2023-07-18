@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/><script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumBarunGothicYetHangul.css" rel="stylesheet">
     <style>
     </style>
 </head>
@@ -29,7 +29,7 @@
     <header>
         <div id="header_section" class="header">
             <h1 class="logo">
-                <a href=""></a>
+                <a href="index.html"></a>
             </h1>
             <div class="gnb">
                 <ul class="menu1">
@@ -41,10 +41,10 @@
                     <li><a href="">멤버십</a></li>
                     <li><a href="">고객센터</a></li>
                     <li><a href="">단체관람/대관문의</a></li>
-                    <li><a href="">로그인</a></li>
+                    <li><a href="login.html">로그인</a></li>
                 </ul>
                 <ul class="menu3">
-                    <li><a href="">회원가입</a></li>
+                    <li><a href="회원가입.html">회원가입</a></li>
                     <li><a href="">바로예매</a></li>
                     <li><a href=""><img src="image/햄버거버튼.png"></a></li>
                 </ul>
@@ -292,7 +292,7 @@
       // 하단 광고 이미지 랜덤 표시
       let bottomBanner = Math.floor(Math.random() * 3);
       let imgName = ['RUBYGILLMAN_980180', 'Conan_980180', 'Metamorphosis_980180'];
-      $('.bot_banner').children('a').children('img').attr('src', '/image/' + imgName[bottomBanner] + '.jpg');
+      $('.bot_banner').children('a').children('img').attr('src', './image/' + imgName[bottomBanner] + '.jpg');
     </script>
 </body>
 </html>
