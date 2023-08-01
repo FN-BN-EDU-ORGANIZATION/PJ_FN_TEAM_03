@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="CSS/member.css">
     <!-- 푸터링크 -->
     <link rel="stylesheet" href="CSS/footer.css">
+    <!-- 네이버 폰트 -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumBarunGothicYetHangul.css" rel="stylesheet">
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 </head>
@@ -266,14 +268,14 @@
 
     updateBtn.addEventListener("click", function() {
       ChangeBox.style.display = "block";
-      SearchBox.style.display = "none";
       WirhdrawBox.style.display = "none";
+      SearchBox.style.display = "none";
     });
 
     deleteBtn.addEventListener("click", function() {
+      WirhdrawBox.style.display = "block";
       ChangeBox.style.display = "none";
       SearchBox.style.display = "none";
-      WirhdrawBox.style.display = "block";
     });
 
     selectBtn.addEventListener("click", function() {
